@@ -1,0 +1,57 @@
+Message Server Marking
+======================
+Total marks:   92/100
+
+Delivery
+  - code Y
+  - Pipenv or requirements.txt Y
+  - README containing
+      - Steps to prepare/run Y
+      - How to test Y
+
+  Marks  5/5
+
+Functionality
+  - Log in (8) Y
+  - Send   (8) Y
+  - Receive (8) Y
+  - Log out (8) Y
+  - Messages persist after restart (8) Y
+  - Logging (5) Y
+  - 3 concurrent clients (5) Y
+  - Error handling: log in twice (5) Y
+  - Error handling: Send malformed message (5) N, crashes server
+
+  Marks  55/60
+
+Unit testing:
+  - Any functioning tests (5)
+  - Test message class (5)
+  - Test request handling (5)
+  (Other tests as applicable)
+
+  Marks  15/15
+
+Code quality
+  (Total of 20 marks, deductions for
+   problems descibed below)
+  
+  - Style issues (-1 per issue, max of -5)
+    - filenames File names should be lower case.
+    - class names
+    - method/attribute names
+    - comments/docstrings
+    - whitespace
+  - SOLID violations (up to -5 per issue)
+  - Comprehesible design (up to 10 positive marks for design)
+
+  A few notes:
+   1. Overall, very nice code.
+   2. Your RequestHandler both handles socket IO and handling
+   the client actions (login, get, send, logout). Better to
+   split that into two classes. (Single Responsibility)
+   3. You used the low level sqlite library rather than an
+   ORM like SQLAlchemy. On a bigger project this would quickly
+   get hard to manage.
+
+  Marks  17/20
